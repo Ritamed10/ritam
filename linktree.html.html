@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Linktree</title>
+  <style>
+    body {
+  font-family: Arial;
+  background-image: url('https://w0.peakpx.com/wallpaper/195/98/HD-wallpaper-computer-coding-screen-tilt-shift-background-ultra-computers-web-internet-background-monitor-computer-screen-code-data-display-programming-aesthetic-webdesign-coding-java-cyberspace-programminglanguage.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  text-align: center;
+  padding: 40px;
+}
+
+    .profile img {
+      width: 120px;
+      border-radius: 50%;
+    }
+
+    .link {
+      display: block;
+      margin: 15px auto;
+      width: 200px;
+      padding: 10px;
+      background: #333;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+
+    .link:hover {
+      background: #555;
+    }
+
+    #details {
+      display: none;
+      margin-top: 20px;
+      background-color: #170303;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    #error {
+      color: red;
+      margin-top: 10px;
+    }
+
+    input, button {
+      padding: 8px;
+      margin-top: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="profile">
+    <img src="add.jpg.jpg" alt="Your Photo">
+    <h2>Ritam Das</h2>
+  </div>
+
+  <!-- Linktree Linksfggggg -->
+  <a href="https://github.com/yourname" class="link">GitHub</a>
+  <a href="https://www.linkedin.com/in/ritam-das-099bb7227/" class="link">LinkedIn</a>
+  <a href="https://www.instagram.com/_ritamedd_" class="link">Instagram</a>
+
+  <!-- DOB Gate -->
+  <div style="margin-top: 30px;">
+    <h3>Want to know more about me?</h3>
+    <input type="text" id="dobInput" placeholder="Enter my DOB (e.g. 05/05/2005)">
+    <button onclick="checkDOB()">Unlock</button>
+    <p id="error"></p>
+  </div>
+
+  <!-- Hidden Details -->
+  <div id="details">
+    <h3>My Personal Details</h3>
+    <p>Email: thisisritam10@gmail.com</p>
+    <p>Phone:9477495080</p>
+    <p>Address: Kolkata, India </p>
+  </div>
+
+  <script>
+    function checkDOB() {
+      const input = document.getElementById("dobInput").value.trim();
+      const correctDOB = "10/03/2006"; // Your actual DOB format
+
+      if (input === correctDOB) {
+        document.getElementById("details").style.display = "block";
+        document.getElementById("error").innerText = "";
+      } else {
+        document.getElementById("details").style.display = "none";
+        document.getElementById("error").innerText = "Wrong date of birth! Try again.";
+      }
+    }
+  </script>
+
+</body>
+</html>
